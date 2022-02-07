@@ -1,22 +1,8 @@
-import Home from '../pages/auth/Home';
-import Dashboard from '../pages/todo/Dashboard';
-import Register from '../pages/auth/Register';
-import Archive from '../pages/todo/Archive';
+import Dashboard from '../pages/client/Dashboard';
 import NoMatch from '../common/NoMatch';
+import Store from '../pages/store/Store';
 
 const routes = [
-  {
-    path: '/login',
-    exact: true,
-    auth: false,
-    component: Home,
-  },
-  {
-    path: '/',
-    exact: true,
-    auth: false,
-    component: Home,
-  },
   {
     path: '/dashboard',
     exact: true,
@@ -24,22 +10,16 @@ const routes = [
     component: Dashboard
   },
   {
-    path: '/register',
-    exact: true,
-    auth: false,
-    component: Register,
-  },
-  {
-    path: '/archive',
+    path: '/store',
     exact: true,
     auth: true,
-    component: Archive,
+    component: Store
   },
   {
     path: '',
     exact: false,
     auth: false,
-    component: NoMatch,
+    component: Dashboard,
   },
 ];
 

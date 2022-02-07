@@ -3,7 +3,7 @@ import Header from './common/Header';
 
 const Base = ({ children }) => (
   <div>
-    {localStorage.getItem('access_token') ? <Header /> : ''}
+    <Header />
     <main>{children}</main>
   </div>
 );
